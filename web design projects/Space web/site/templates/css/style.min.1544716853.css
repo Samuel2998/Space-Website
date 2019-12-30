@@ -9473,39 +9473,9 @@ body.cke_editable blockquote.Awards-title {
     }
 }
 
-.Heading--main, h1, .h1 {
-    font-size: 24px
-}
 
-@media(min-width:768px) {
-    .Heading--main, h1, .h1 {
-        font-size: 34px
-    }
-}
 
-@media(min-width:992px) {
-    .Heading--main, h1, .h1 {
-        font-size: 40px
-    }
-}
 
-@media(min-width:1300px) {
-    .Heading--main, h1, .h1 {
-        font-size: 40px
-    }
-}
-
-@media(min-width:1600px) {
-    .Heading--main, h1, .h1 {
-        font-size: 46px
-    }
-}
-
-@media(min-width:2400px) {
-    .Heading--main, h1, .h1 {
-        font-size: 50px
-    }
-}
 
 .Heading--secondary, h2, .h2 {
     font-size: 22px

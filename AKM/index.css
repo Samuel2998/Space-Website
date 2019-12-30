@@ -1,0 +1,9 @@
+div{
+    transform: translate(43%,0) translate3d(0px,0px,0px);
+}
+
+h1{
+    background: -webkit-linear-gradient(#E94150, #5D2E95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
