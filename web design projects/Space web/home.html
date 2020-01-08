@@ -73,13 +73,13 @@
     margin-bottom: 0;
     background-color: #2d2d30;
     border: 0;
-    font-size: 10px !important;
+    font-size: 20px !important;
     letter-spacing: 10px;
     opacity: 0.7;
   }
   .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
-    font-size: 10px;
+    font-size: 20px;
   }
   .navbar-nav li a:hover {
     color: #fff !important;
@@ -107,7 +107,7 @@
   .row{
     margin-left: 1%;
     margin-right: 1%;
-   
+    margin-top: 30px;
   }
   .home{
     margin-bottom: 20px;
@@ -133,11 +133,7 @@
   text-align: center;
   color: white;
 }
-#manage{
-  margin-left: 60px;
 
-
-}
 
 
 .col-sm-4:hover #proj {
@@ -179,17 +175,7 @@
       -webkit-transform: translateY(0%);
     }
   }
-  
-  
-#manage{
-  margin-left: 20%;
-  margin-top: 20px; 
-}
 
-#visual{
-  margin-left: 50%;
-  margin-top: 20px;
-}
 #about{
   margin-top: 50px;
 }
@@ -199,6 +185,46 @@
 
 .home{
   animation: slide 1s;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
 }
 
   </style>
@@ -246,44 +272,20 @@
 
   <div class="row slideanim">
   <div class="row" >
-    <div class="col-4 col-sm-4"><a href=""><img src="74441735_149245973130415_1127825336386453504_o.png" width="100%" id="proj" ><div class="middle"><div class="text">Safe house</div></div></a></div>
-    <div class="col-4 col-sm-4"><a href=""><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj"><div class="middle"><div class="text">Safe house</div></div></a></div>
-     <div class="col-4 col-sm-4"><a href=""><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj" ><div class="middle"><div class="text">Safe house</div></div></a></div>
+    <div class="col-4 col-sm-4"><a href=""><img src="safe house.png" width="100%" id="proj" ><div class="middle"><div class="text">Safe house</div></div></a></div>
+    <div class="col-4 col-sm-4"><a href=""><img src="partyholic.png" width="100%" id="proj"><div class="middle"><div class="text">Safe house</div></div></a></div>
+     <div class="col-4 col-sm-4"><a href=""><img src="dp 2.png" width="100%" id="proj" ><div class="middle"><div class="text">Safe house</div></div></a></div>
  </div>
   </div>
   
  <div class="row slideanim">
   <div class="row">
-   <div class="col-4 col-sm-4"><img src="74441735_149245973130415_1127825336386453504_o.png" width="100%" id="proj"></div>
-    <div class="col-4 col-sm-4"><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj"></div>
-     <div class="col-4 col-sm-4"><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj"></div>
+   <div class="col-4 col-sm-4"><a href=""><img src="curvy 2.png" width="100%" id="proj"><div class="middle"><div class="text">dhjdhsjhj</div></div></a></div>
+    <div class="col-4 col-sm-4"><a href="intime.html"><img src="intime.png" width="100%" id="proj"><div class="middle"><div class="text">Safe House</div></div></a></div>
+     <div class="col-4 col-sm-4"><a href=""><img src="teatre 2.png" width="100%" id="proj"><div class="middle"><div class="text">Theatre 2</div></div></a></div>
    </div>
  
   </div>
-
- <div class="row slideanim">
- <div class="row">
-   <div class="col-4 col-sm-4"><img src="74441735_149245973130415_1127825336386453504_o.png" width="100%" id="proj"></div>
-    <div class="col-4 col-sm-4"><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj"></div>
-     <div class="col-4 col-sm-4"><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj"></div>
-   </div>
- 
-  </div>
-  
- <div class="row slideanim">
-  <div class="row">
-   <div class="col-4 col-sm-4"><img src="74441735_149245973130415_1127825336386453504_o.png" width="100%" id="proj"></div>
-    <div class="col-4 col-sm-4"><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj"></div>
-     <div class="col-4 col-sm-4"><img src="1148273-doodle-art-wallpapers-1920x1080-hd-1080p.jpg" width="100%" id="proj"></div>
-   
- </div>
-  </div>
-
-
-
-
-
-
 
 </div>
 <div id="service" class="container-fluid">
@@ -292,10 +294,7 @@
 
 
 <div class="row slideanim">
-<div id="manage" class="col-9 col-sm-9"><img src="Asset 1.png" width="50%"></div>
-<div id="visual" class="col-9 col-sm-9"><img src="Asset 2.png" width="50%"></div>
-<div id="manage" class="col-9 col-sm-9"><img src="Asset 3.png" width="50%"></div>
-<div id="visual" class="col-9 col-sm-9"><img src="Asset 4.png" width="50%"></div>
+
 </div>
 
 
@@ -445,6 +444,9 @@ $(document).ready(function(){
     });
   });
 })
+$(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
 </script>
 
 
