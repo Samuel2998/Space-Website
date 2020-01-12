@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- 
+ <link rel="stylesheet" type="text/css" href="loader.css">
 
  <style>
   body {
@@ -197,6 +197,9 @@
 
 
 <body>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -408,6 +411,11 @@ $(document).ready(function(){
     });
   });
 })
+
+$(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+
 </script>
 
 
