@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="owl.theme.default.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -66,6 +69,48 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
+
+
+  .wrapper{
+  	width: 100%;
+  	margin:0 auto;
+  }
+  .wrapper h2{
+  	font-family: baloo;
+  	text-align: center;
+  	padding-top: 5%;
+  	font-size: 40px;
+
+  }
+  .section-padding{
+
+  	padding: 15px 0;
+
+  }
+  .owl-dot{
+
+  	display: inline-block;
+  	height: 5px !important;
+  	width: 5px !important;background-color: pink !important;
+  	border-radius: 50%;
+  	margin: 0 5px;
+
+
+  }
+
+  .owl-dots{
+
+  	text-align: center;
+  }
+
+  .owl-dot.active{
+  	background-color: white !important;
+  }
+  
+
+
+
+
 
 
  .navbar {
@@ -262,6 +307,45 @@
 <div class="row slideanim">
 
 
+	<div class="wrapper">
+		<h2>Our valued clients</h2>
+		<div class="client-carousel section-padding owl-carousel">
+			<div class="img-area">
+				<img src="space.png"  alt="">
+			</div>
+
+			<div class="img-area">
+				<img src="sf.png" alt="">
+			</div>
+
+			<div class="img-area">
+				<img src="sf.png" alt="">
+			</div>
+
+			<div class="img-area">
+				<img src="sf.png" alt="">
+			</div>
+
+
+			<div class="img-area">
+				<img src="sf.png" alt="">
+			</div>
+			<div class="img-area">
+				<img src="sf.png" alt="">
+			</div>
+			<div class="img-area">
+				<img src="sf.png" alt="">
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+
+
+
 </div>
 
 
@@ -420,8 +504,32 @@ $(window).on("load",function(){
 
 
 
+<script src="owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+	$('.client-carousel').owlCarousel({
+			    loop:true,
+			    margin:10,
+			    autoplay:true,
+			    autoplaySpeed:1000,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:3
+			        },
+			        1000:{
+			            items:5
+			        }
+    }
+})
 
 
+
+
+
+</script>
 
 </body>
 </html>
