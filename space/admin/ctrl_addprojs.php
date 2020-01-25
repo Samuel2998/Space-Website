@@ -15,14 +15,19 @@ class ctrl_addprojs {
 
 		global $model;
 
-		$stm = $model->getProjectItemsDB($id);
+		$stm = $model->addProjsDB($name, $photo);
 
-		$zero = 0;
-		$stm->bind_param('dd', $zero, $id);
-		$stm->execute();
-		$stm->store_result();
+		if($stm != 'fail'){
+			$result = $stm->execute();
+			//$stm->store_result();
 
-		return $stm;
+			if($result>0){
+				header("location: http://localhost/space/admin");
+			}
+
+		}else{
+			echo "File type error!";
+		}
 
 	}
 

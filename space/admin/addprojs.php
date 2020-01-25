@@ -1,4 +1,23 @@
-<?php include("../ctrl_project.php"); ?>
+<?php
+
+if(isset($_POST['addprjs'])){
+  
+  $name = $_POST['pname'];
+  $pic_name = $_FILES['photo']['name'];
+  $pic_tmp = $_FILES['photo']['tmp_name'];
+  $pic_size = $_FILES['photo']['size'];
+  $photo = array("name"=>$pic_name, "tmp"=>$pic_tmp, "size"=>$pic_size);
+
+  //echo $pic_size;
+  //echo $name;
+  include("ctrl_addprojs.php"); 
+
+  $controller = new ctrl_addprojs();
+  $controller->addProjs($name, $photo);
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +42,7 @@
       <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-          <form action="/action_page.php" class="was-validated addprojs">
+          <form class="was-validated addprojs" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="pame">Project Name: </label>
               <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" required>
@@ -36,7 +55,7 @@
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <input type="submit" class="btn btn-primary" value="Add Project" name="addprjs">
           </form>
         </div>
       </div>
