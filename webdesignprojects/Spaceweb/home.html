@@ -15,6 +15,244 @@
  <link rel="stylesheet" type="text/css" href="loader.css">
 <link rel="stylesheet" type="text/css" href="home.css">
 
+<style>
+  body {
+
+
+      position: relative; 
+      background-color: black;
+      background-position: center;
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+
+
+  }
+ 
+
+
+  .person {
+    border: 5px solid transparent;
+    margin-bottom: 25px;
+    opacity: 0.8;
+   
+    
+  }
+  .person:hover {
+    border-color: #176a6d;
+  }
+
+  .carousel-inner img {
+   
+    width: 100%;
+    height: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+
+  .wrapper{
+    width: 100%;
+    margin:0 auto;
+  }
+  .wrapper h2{
+    font-family: baloo;
+    text-align: center;
+    padding-top: 5%;
+    font-size: 40px;
+
+  }
+  .section-padding{
+
+    padding: 15px 0;
+
+  }
+  .owl-dot{
+
+    display: inline-block;
+    height: 5px !important;
+    width: 5px !important;background-color: pink !important;
+    border-radius: 50%;
+    margin: 0 5px;
+
+
+  }
+
+  .owl-dots{
+
+    text-align: center;
+  }
+
+  .owl-dot.active{
+    background-color: white !important;
+  }
+  
+
+
+
+
+
+
+ .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 20px !important;
+    letter-spacing: 5px;
+    opacity: 0.7;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+    font-size: 20px;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+
+  
+  #projects{
+    margin-bottom: 70px;
+  }
+
+  .col-4{
+    margin-bottom: 20px;
+ 
+  }
+  #proj{
+    border-radius: 25px;
+  }
+  .row{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 30px;
+  }
+  .home{
+    margin-bottom: 20px;
+  }
+  .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text {
+  background-color: transparent;
+  color: pink;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+#ser{
+  text-align: center;
+  color: white;
+  font-family:LexendDeca Regular, sans-serif;
+}
+
+
+
+.col-sm-4:hover #proj {
+  opacity: 0.3;
+}
+
+.col-sm-4:hover .middle {
+  opacity: 1;
+}
+
+   .slideanim {
+    visibility:hidden;
+
+   }
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+#about{
+  margin-top: 50px;
+}
+#mem{
+  color: white;
+  font-family:LexendDeca Regular, sans-serif;
+}
+
+.home{
+  animation: slide 1s;
+}
+#txtmem{
+  color: white;
+  font-family:LexendDeca Regular, sans-serif;
+}
+#cntct{
+  font-family: LexendDeca Regular, sans-serif;
+}
+#projdes{
+  margin-top: 13px;
+  color: white;
+  font-family: LexendDeca Regular, sans-serif;
+  text-align: center;
+}
+#projimg{
+  margin-left: 43%;
+}
+  </style>
+
+
+
 </head>
 
 
@@ -62,15 +300,15 @@
   <div class="row slideanim">
   <div class="row" >
     <div class="col-4 col-sm-4"><a href=""><img src="images/sf.png" width="100%" id="proj" ><div class="middle"><div class="text">Safe house</div></div></a></div>
-    <div class="col-4 col-sm-4"><a href=""><img src="images/partyholic.png" width="100%" id="proj"><div class="middle"><div class="text">Safe house</div></div></a></div>
-     <div class="col-4 col-sm-4"><a href=""><img src="images/dp 2.png" width="100%" id="proj" ><div class="middle"><div class="text">Safe house</div></div></a></div>
+    <div class="col-4 col-sm-4"><a href=""><img src="images/partyholic.png" width="100%" id="proj"><div class="middle"><div class="text">Partyholics</div></div></a></div>
+     <div class="col-4 col-sm-4"><a href=""><img src="images/dp 2.png" width="100%" id="proj" ><div class="middle"><div class="text">Space X COR</div></div></a></div>
  </div>
   </div>
   
  <div class="row slideanim">
   <div class="row">
-   <div class="col-4 col-sm-4"><a href=""><img src="images/curvy 2.png" width="100%" id="proj"><div class="middle"><div class="text">dhjdhsjhj</div></div></a></div>
-    <div class="col-4 col-sm-4"><a href="intime.html"><img src="images/intime.png" width="100%" id="proj"><div class="middle"><div class="text">Safe House</div></div></a></div>
+   <div class="col-4 col-sm-4"><a href=""><img src="images/curvy 2.png" width="100%" id="proj"><div class="middle"><div class="text">Curvy by JUE</div></div></a></div>
+    <div class="col-4 col-sm-4"><a href="intime.html"><img src="images/intime.png" width="100%" id="proj"><div class="middle"><div class="text">INTIME</div></div></a></div>
      <div class="col-4 col-sm-4"><a href=""><img src="images/t2.png" width="100%" id="proj"><div class="middle"><div class="text">Theatre 2</div></div></a></div>
    </div>
  
@@ -85,7 +323,7 @@
 
 
   
-<h1 id="ser"><strong>Services that we provide</strong></h1>
+<h1 id="ser">Services that we provide</h1>
 
 
 <div class="row slideanim">
@@ -227,7 +465,49 @@
 
 </div>
 
+<div class="row slideanim">
 
+
+  <div class="wrapper">
+    <h2>Our valued clients</h2>
+    <div class="client-carousel section-padding owl-carousel">
+      <div class="img-area">
+        <img src="space.png"  alt="">
+      </div>
+
+      <div class="img-area">
+        <img src="sf.png" alt="">
+      </div>
+
+      <div class="img-area">
+        <img src="sf.png" alt="">
+      </div>
+
+      <div class="img-area">
+        <img src="sf.png" alt="">
+      </div>
+
+
+      <div class="img-area">
+        <img src="sf.png" alt="">
+      </div>
+      <div class="img-area">
+        <img src="sf.png" alt="">
+      </div>
+      <div class="img-area">
+        <img src="sf.png" alt="">
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+</div>
 
 
 
@@ -280,6 +560,146 @@ $(window).on("load",function(){
         });
 
 </script>
+
+<script src="owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+  $('.client-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          autoplay:true,
+          autoplaySpeed:1000,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },
+              1000:{
+                  items:5
+              }
+    }
+})
+
+
+
+
+
+</script>
+
+
+
+//logos twy har
+
+ <link rel="stylesheet" type="text/css" href="owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="owl.theme.default.css">
+  .wrapper{
+    width: 100%;
+    margin:0 auto;
+  }
+  .wrapper h2{
+    font-family: baloo;
+    text-align: center;
+    padding-top: 5%;
+    font-size: 40px;
+
+  }
+  .section-padding{
+
+    padding: 15px 0;
+
+  }
+  .owl-dot{
+
+    display: inline-block;
+    height: 5px !important;
+    width: 5px !important;background-color: pink !important;
+    border-radius: 50%;
+    margin: 0 5px;
+
+
+  }
+
+  .owl-dots{
+
+    text-align: center;
+  }
+
+  .owl-dot.active{
+    background-color: white !important;
+  }
+  <div class="row slideanim">
+
+    <div class="wrapper">
+        <h2>Our valued clients</h2>
+        <div class="client-carousel section-padding owl-carousel">
+            <div class="img-area">
+                <img src="safe house.png" alt="">
+            </div>
+
+            <div class="img-area">
+                <img src="safe house.png" alt="">
+            </div>
+
+            <div class="img-area">
+                <img src="safe house.png" alt="">
+            </div>
+
+            <div class="img-area">
+                <img src="safe house.png" alt="">
+            </div>
+
+
+            <div class="img-area">
+                <img src="safe house.png" alt="">
+            </div>
+            <div class="img-area">
+                <img src="safe house.png" alt="">
+            </div>
+            <div class="img-area">
+                <img src="safe house.png" alt="">
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+<script src="owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+    $('.client-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                autoplay:true,
+                autoplaySpeed:1000,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+    }
+})
+
+
+
+
+
+</script>
+
+
+
 
 
 

@@ -160,6 +160,7 @@ body {
     }
   }
 
+
 #about{
   margin-top: 50px;
 }
@@ -176,6 +177,8 @@ body {
   font-family:LexendDeca Regular, sans-serif;
 }
 #cntct{
+  color: white;
+  text-align: center;
   font-family: LexendDeca Regular, sans-serif;
 }
 #projdes{
@@ -187,4 +190,8 @@ body {
 
 #projimg{
   margin-left: 43%;
+}
+
+#contact{
+  margin-top: 50px;
 }
