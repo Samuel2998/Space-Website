@@ -12,244 +12,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- <link rel="stylesheet" type="text/css" href="loader.css">
-<link rel="stylesheet" type="text/css" href="home.css">
+ <link rel="stylesheet" type="text/css" href="css/loader.css">
+<link rel="stylesheet" type="text/css" href="css/home.css">
 
-<style>
-  body {
+ <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-
-      position: relative; 
-      background-color: black;
-      background-position: center;
-      background-repeat:no-repeat;
-      background-attachment: fixed;
-
-
-  }
- 
-
-
-  .person {
-    border: 5px solid transparent;
-    margin-bottom: 25px;
-    opacity: 0.8;
-   
-    
-  }
-  .person:hover {
-    border-color: #176a6d;
-  }
-
-  .carousel-inner img {
-   
-    width: 100%;
-    height: 100%; /* Set width to 100% */
-    margin: auto;
-  }
-  .carousel-caption h3 {
-    color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-    background: #2d2d30;
-    color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
-  .list-group-item:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-
-  .wrapper{
-    width: 100%;
-    margin:0 auto;
-  }
-  .wrapper h2{
-    font-family: baloo;
-    text-align: center;
-    padding-top: 5%;
-    font-size: 40px;
-
-  }
-  .section-padding{
-
-    padding: 15px 0;
-
-  }
-  .owl-dot{
-
-    display: inline-block;
-    height: 5px !important;
-    width: 5px !important;background-color: pink !important;
-    border-radius: 50%;
-    margin: 0 5px;
-
-
-  }
-
-  .owl-dots{
-
-    text-align: center;
-  }
-
-  .owl-dot.active{
-    background-color: white !important;
-  }
-  
-
-
-
-
-
-
- .navbar {
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 20px !important;
-    letter-spacing: 5px;
-    opacity: 0.7;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-    font-size: 20px;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-
-  
-  #projects{
-    margin-bottom: 70px;
-  }
-
-  .col-4{
-    margin-bottom: 20px;
- 
-  }
-  #proj{
-    border-radius: 25px;
-  }
-  .row{
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 30px;
-  }
-  .home{
-    margin-bottom: 20px;
-  }
-  .middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-.text {
-  background-color: transparent;
-  color: pink;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-
-#ser{
-  text-align: center;
-  color: white;
-  font-family:LexendDeca Regular, sans-serif;
-}
-
-
-
-.col-sm-4:hover #proj {
-  opacity: 0.3;
-}
-
-.col-sm-4:hover .middle {
-  opacity: 1;
-}
-
-   .slideanim {
-    visibility:hidden;
-
-   }
-  .slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-
-#about{
-  margin-top: 50px;
-}
-#mem{
-  color: white;
-  font-family:LexendDeca Regular, sans-serif;
-}
-
-.home{
-  animation: slide 1s;
-}
-#txtmem{
-  color: white;
-  font-family:LexendDeca Regular, sans-serif;
-}
-#cntct{
-  font-family: LexendDeca Regular, sans-serif;
-}
-#projdes{
-  margin-top: 13px;
-  color: white;
-  font-family: LexendDeca Regular, sans-serif;
-  text-align: center;
-}
-#projimg{
-  margin-left: 43%;
-}
-  </style>
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
 
 
@@ -329,24 +99,24 @@
 <div class="row slideanim">
 <div class="row">
   <div class="col-sm-4">
-      <img src="images/brand guideline.png" id="projimg" width="50" height="50">
+      <img src="images/Graphicdesign.PNG" id="projimg" width="50" height="50">
       <div id="projdes">
-        <p>Project guideline</p>
+        <p id="serv">Graphic Design</p>
       </div>
   </div>
 
 
 <div class="col-sm-4">
-      <img src="images/illlustration 2.png" id="projimg" width="50" height="50">
+      <img src="images/Logodesign.PNG" id="projimg" width="50" height="50">
       <div id="projdes">
-        <p>Illustrations</p>
+        <p id="serv">Logo Design</p>
       </div>
 </div>
 
 <div class="col-sm-4">
-      <img src="images/logo design.png" id="projimg" width="50" height="50">
+      <img src="images/PhotoAndVideo.PNG" id="projimg" width="50" height="50">
       <div id="projdes">
-        <p>Logo Design</p>
+        <p id="serv">Photo and Video</p>
       </div>
 </div>
 
@@ -356,24 +126,51 @@
 <div class="row slideanim">
 <div class="row">
   <div class="col-sm-4">
-      <img src="images/IMG_2380.GIF" id="projimg" width="50" height="50">
+      <img src="images/SocialMediaMarketing 2.PNG" id="projimg" width="50" height="50">
       <div id="projdes">
-        <p>Project guideline</p>
+        <p id="serv">Social Media Marketing</p>
       </div>
   </div>
 
 
 <div class="col-sm-4">
-      <img src="images/illlustration 2.png" id="projimg" width="50" height="50">
+      <img src="images/UIUXdesign.PNG" id="projimg" width="50" height="50">
       <div id="projdes">
-        <p>Illustrations</p>
+        <p id="serv">UI/UX Design</p>
       </div>
 </div>
 
 <div class="col-sm-4">
-      <img src="images/logo design.png" id="projimg" width="50" height="50">
+      <img src="images/3Ddesign.PNG" id="projimg" width="50" height="50">
       <div id="projdes">
-        <p>Logo Design</p>
+        <p id="serv">3D Design</p>
+      </div>
+</div>
+
+</div>
+</div>
+
+<div class="row slideanim">
+<div class="row">
+  <div class="col-sm-4">
+      <img src="images/Animation.PNG" id="projimg" width="50" height="50">
+      <div id="projdes">
+        <p id="serv">Animation</p>
+      </div>
+  </div>
+
+
+<div class="col-sm-4">
+      <img src="images/Branding.PNG" id="projimg" width="50" height="50">
+      <div id="projdes">
+        <p id="serv">Branding</p>
+      </div>
+</div>
+
+<div class="col-sm-4">
+      <img src="images/VisualDesign.PNG" id="projimg" width="50" height="50">
+      <div id="projdes">
+        <p id="serv">Visual Design</p>
       </div>
 </div>
 
@@ -440,11 +237,11 @@
     <div class="col-sm-4">
       
       
-        <img src="images/786410.jpg" class="img-circle person" alt="Random Name" width="150" height="150">
+        <img src="images/IMG_1304.JPG" class="img-circle person" alt="Random Name" width="150" height="150">
       
       
-        <p id="txtmem">Ye Gaung Moe Myint</p>
-        <p id="txtmem">Graphic Art Designer</p>
+        <p id="txtmem">Han Htet Naing</p>
+        <p id="txtmem">Senior Photographer</p>
         <p id="txtmem">Click here to check his facebook</p>
       
     </div>
@@ -469,55 +266,84 @@
 
 
   <div class="wrapper">
-    <h2>Our valued clients</h2>
+    <h2 id="clnt">Our valued clients</h2>
     <div class="client-carousel section-padding owl-carousel">
       <div class="img-area">
-        <img src="space.png"  alt="">
+        <img src="images/Asset 1 copy 3.png"  alt="">
       </div>
 
       <div class="img-area">
-        <img src="sf.png" alt="">
+        <img src="images/Untitled-1 5.png" alt="">
       </div>
 
       <div class="img-area">
-        <img src="sf.png" alt="">
+        <img src="images/Asset 6.png" alt="">
       </div>
 
       <div class="img-area">
-        <img src="sf.png" alt="">
+        <img src="images/teatre 4.png" alt="">
       </div>
-
-
-      <div class="img-area">
-        <img src="sf.png" alt="">
-      </div>
-      <div class="img-area">
-        <img src="sf.png" alt="">
-      </div>
-      <div class="img-area">
-        <img src="sf.png" alt="">
-      </div>
-
-    </div>
-
-
-
-  </div>
-
-
-
+  </di`v>
+</div>
 
 </div>
 
 
 
-<div id="contact" class="container-fluid">
+
+
+<div class="row slideanim">
+  <div id="contact" class="container-fluid">
   <h1 id="cntct">Contact us</h1>
   
 
+  <footer class="footer-distributed">
 
+      <div class="footer-left">
+       
+        <h3>SPACE<span> Studio</span></h3>
+
+        
+        
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+            <p><span>4th Floor,NO.47,Insein Road,</span>
+            Hlaing Township,Yangon</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p><a href="tel:+959 769079054">+959 769079054</a></p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@eduonix.com">Space@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>What We Do</span>
+          We are servicing Logo Creation,Brand Guideline,Event Design,3D Design,Social Media Maeketing,Commercial Video,Animation,MV Animation and many more</p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      
+    </footer>
 
 </div>
+</div>
+
+
+
+
 
 <script>
 $(document).ready(function(){
@@ -561,7 +387,7 @@ $(window).on("load",function(){
 
 </script>
 
-<script src="owl.carousel.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script>
   $('.client-carousel').owlCarousel({
@@ -590,107 +416,14 @@ $(window).on("load",function(){
 
 
 
-//logos twy har
 
- <link rel="stylesheet" type="text/css" href="owl.carousel.css">
-  <link rel="stylesheet" type="text/css" href="owl.theme.default.css">
-  .wrapper{
-    width: 100%;
-    margin:0 auto;
-  }
-  .wrapper h2{
-    font-family: baloo;
-    text-align: center;
-    padding-top: 5%;
-    font-size: 40px;
-
-  }
-  .section-padding{
-
-    padding: 15px 0;
-
-  }
-  .owl-dot{
-
-    display: inline-block;
-    height: 5px !important;
-    width: 5px !important;background-color: pink !important;
-    border-radius: 50%;
-    margin: 0 5px;
-
-
-  }
-
-  .owl-dots{
-
-    text-align: center;
-  }
-
-  .owl-dot.active{
-    background-color: white !important;
-  }
-  <div class="row slideanim">
-
-    <div class="wrapper">
-        <h2>Our valued clients</h2>
-        <div class="client-carousel section-padding owl-carousel">
-            <div class="img-area">
-                <img src="safe house.png" alt="">
-            </div>
-
-            <div class="img-area">
-                <img src="safe house.png" alt="">
-            </div>
-
-            <div class="img-area">
-                <img src="safe house.png" alt="">
-            </div>
-
-            <div class="img-area">
-                <img src="safe house.png" alt="">
-            </div>
-
-
-            <div class="img-area">
-                <img src="safe house.png" alt="">
-            </div>
-            <div class="img-area">
-                <img src="safe house.png" alt="">
-            </div>
-            <div class="img-area">
-                <img src="safe house.png" alt="">
-            </div>
-
-        </div>
-
-
-
-    </div>
+  
 
 
 
 
-</div>
-<script src="owl.carousel.min.js"></script>
-<script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script>
-    $('.client-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                autoplay:true,
-                autoplaySpeed:1000,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:3
-                    },
-                    1000:{
-                        items:5
-                    }
-    }
-})
+
+
 
 
 
