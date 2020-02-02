@@ -18,7 +18,7 @@ class ctrl_projects {
 		$stm = $model->getProjectsDB();
 
 		$zero = 0;
-		$stm->bind_param('d', $zero);
+		$stm->bind_param('i', $zero);
 		$stm->execute();
 		$stm->store_result();
 

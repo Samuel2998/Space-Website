@@ -43,25 +43,6 @@
         <h2 class="title">Projects</h2>
       </div>
       <div class="row imagesDiv">
-        <div class="col-sm-4 imgDiv">
-          <img src="images/partyholic.png" class="rounded">
-          <div class="focusImg">
-            <a href="project.php">Partyholic</a>
-          </div>
-        </div>
-        <div class="col-sm-4 imgDiv">
-          <img src="images/partyholic.png" class="rounded">
-          <div class="focusImg">
-            <a>Partyholic</a>
-          </div>
-        </div>
-        <div class="col-sm-4 imgDiv">
-          <img src="images/partyholic.png" class="rounded">
-          <div class="focusImg">
-            <a>Partyholic</a>
-          </div>
-        </div>
-
         <?php
 
         $controller = new ctrl_projects();

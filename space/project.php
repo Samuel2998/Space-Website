@@ -46,54 +46,7 @@
       <div class="row">
         <h2 class="title">Projects</h2>
       </div>
-      <div class="row imagesDiv">
-        <div class="col-sm-4 imgDiv">
-          <img src="images/partyholic.png" class="rounded">
-        </div>
-        <div class="col-sm-8">
-          <br><br>
-          <h2 style="color: white;">Title</h2>
-          <p style="margin-top: 20px; color: white;">
-            sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar 
-          </p>
-        </div>
-      </div><br><br>
-      <div class="row imagesDiv">
-        <div class="col-sm-8">
-          <br><br>
-          <h2 style="color: white;">Title</h2>
-          <p style="margin-top: 20px; color: white;">
-            sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar 
-          </p>
-        </div><br><br>
-        <div class="col-sm-4 imgDiv">
-          <img src="images/partyholic.png" class="rounded">
-        </div>
-      </div>
-      <div class="row imagesDiv">
-        <div class="col-sm-4 imgDiv">
-          <img src="images/partyholic.png" class="rounded">
-        </div>
-        <div class="col-sm-8">
-          <br><br>
-          <h2 style="color: white;">Title</h2>
-          <p style="margin-top: 20px; color: white;">
-            sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar 
-          </p>
-        </div>
-      </div><br><br>
-      <div class="row imagesDiv">
-        <div class="col-sm-8">
-          <br><br>
-          <h2 style="color: white;">Title</h2>
-          <p style="margin-top: 20px; color: white;">
-            sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar sar 
-          </p>
-        </div><br><br>
-        <div class="col-sm-4 imgDiv">
-          <img src="images/partyholic.png" class="rounded">
-        </div>
-      </div>
+      
       <?php
 
       $stm->bind_result($id, $title, $text, $photo);

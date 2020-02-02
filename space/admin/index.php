@@ -38,8 +38,8 @@
           <div class="adminImg">
             <a class="btn btn-success" href="project.php?id=<?php echo $id; ?>"><?php echo $name; ?></a>
           </div>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
+          <a class="btn btn-primary" href="editprojs.php?id=<?php echo $id; ?>">Edit</a>
+          <a class="btn btn-danger" href="delprojs.php?id=<?php echo $id; ?>">Delete</a>
         </div><br>
 
         <?php } ?>

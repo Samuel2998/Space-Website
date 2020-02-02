@@ -1,6 +1,7 @@
 <?php include("../ctrl_project.php");
   
   $id = $_GET['id'];
+  $projID = $id;
 
   $controller = new ctrl_project();
   $stm = $controller->getProjectItems($id);
@@ -27,7 +28,7 @@
       <div class="row">
         <h2 class="title">Projects (Admin)</h2>
       </div>
-      <a class="btn btn-success" href="">Add Project</a>
+      <a class="btn btn-success" href="addoneproj.php?id=<?php echo $id ?>">Add Project</a>
       <?php
 
       $stm->bind_result($id, $title, $text, $photo);
@@ -42,8 +43,8 @@
           <p style="margin-top: 20px; color: white;">
             <?php echo $text; ?>
           </p>
-          <a class="btn btn-primary" href="">Edit</a>
-          <a class="btn btn-danger" href="">Delete</a>
+          <a class="btn btn-primary" href="editoneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Edit</a>
+          <a class="btn btn-danger" href="deloneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Delete</a>
         </div><br><br>
         <div class="col-sm-4 imgDiv">
           <img src="../images/proj_photos/<?php echo $photo ?>" class="rounded">
