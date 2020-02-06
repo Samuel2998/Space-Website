@@ -22,6 +22,16 @@ class model_project{
 
 	}
 
+	function getVideoDB(){
+
+		global $conn;
+
+		$stm = $conn->prepare("SELECT vid_id, vid_title, vid_text, vid_link FROM vidproject WHERE vid_status=? AND vid_proj_id=? ORDER BY vid_datetime DESC");
+
+		return $stm;
+
+	}
+
 }
 
 ?>

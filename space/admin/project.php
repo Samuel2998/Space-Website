@@ -5,6 +5,7 @@
 
   $controller = new ctrl_project();
   $stm = $controller->getProjectItems($id);
+  $stmv = $controller->getVideo($id);
 
  ?>
 
@@ -28,7 +29,8 @@
       <div class="row">
         <h2 class="title">Projects (Admin)</h2>
       </div>
-      <a class="btn btn-success" href="addoneproj.php?id=<?php echo $id ?>">Add Project</a>
+      <a class="btn btn-success" href="addoneproj.php?id=<?php echo $id ?>">Add Photo Project</a>
+      <a class="btn btn-info" href="addvidproj.php?id=<?php echo $id ?>">Add Video Project</a>
       <?php
 
       $stm->bind_result($id, $title, $text, $photo);
@@ -43,11 +45,40 @@
           <p style="margin-top: 20px; color: white;">
             <?php echo $text; ?>
           </p>
-          <a class="btn btn-primary" href="editoneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Edit</a>
+          <a class="btn btn-warning" href="editoneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Edit</a>
           <a class="btn btn-danger" href="deloneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Delete</a>
         </div><br><br>
         <div class="col-sm-4 imgDiv">
           <img src="../images/proj_photos/<?php echo $photo ?>" class="rounded">
+        </div>
+      </div>
+
+      <?php } ?>
+
+      <!-- Video -->
+
+      <?php
+
+      $stmv->bind_result($id, $title, $text, $link);
+
+      while($stmv->fetch()){
+      ?>
+
+      <div class="row imagesDiv">
+        <div class="col-sm-8">
+          <br><br>
+          <h2 style="color: white;"><?php echo $title ?></h2>
+          <p style="margin-top: 20px; color: white;">
+            <?php echo $text; ?>
+          </p>
+          <a class="btn btn-warning" href="editoneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Edit</a>
+          <a class="btn btn-danger" href="deloneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Delete</a>
+        </div><br><br>
+        <div class="col-sm-4 imgDiv">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="752" height="423" src="<?php echo $link; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><?php echo $link; ?></p>
+          </div>
         </div>
       </div>
 

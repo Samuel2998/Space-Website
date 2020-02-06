@@ -15,7 +15,22 @@ class ctrl_project {
 
 		global $model;
 
-		$stm = $model->getProjectItemsDB($id);
+		$stm = $model->getProjectItemsDB();
+
+		$zero = 0;
+		$stm->bind_param('dd', $zero, $id);
+		$stm->execute();
+		$stm->store_result();
+
+		return $stm;
+
+	}
+
+	function getVideo($id){
+
+		global $model;
+
+		$stm = $model->getVideoDB();
 
 		$zero = 0;
 		$stm->bind_param('dd', $zero, $id);
