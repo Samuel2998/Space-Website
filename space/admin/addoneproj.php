@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['admin']) || $_SESSION['admin'] != true){
+  header("location: http://localhost/space/admin/welcome.php");
+  exit;
+}
+
+include("ctrl_addoneproj.php");
+
 $id = $_GET['id'];
 
 if(isset($_POST['addprjs'])){
@@ -13,7 +22,6 @@ if(isset($_POST['addprjs'])){
 
   //echo $pic_size;
   //echo $name;
-  include("ctrl_addoneproj.php"); 
 
   $controller = new ctrl_addoneproj();
   $controller->addProj($name, $photo, $text, $id);

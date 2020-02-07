@@ -7,12 +7,12 @@ if(!isset($_SESSION['admin']) || $_SESSION['admin'] != true){
   exit;
 }
 
-include("ctrl_deloneproj.php");
+include("ctrl_delvidproj.php");
 
 $id = $_GET['id'];
 $projID = $_GET['projID'];
 
-$controller = new ctrl_deloneproj();
-$controller->delOneProj($id, $projID);
+$controller = new ctrl_delvidproj();
+$controller->delVideo($id, $projID);
 
 ?>

@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['admin']) || $_SESSION['admin'] != true){
+  header("location: http://localhost/space/admin/welcome.php");
+  exit;
+}
+
+include("ctrl_addprojs.php");
+
 if(isset($_POST['addprjs'])){
   
   $name = $_POST['pname'];
@@ -7,10 +16,6 @@ if(isset($_POST['addprjs'])){
   $pic_tmp = $_FILES['photo']['tmp_name'];
   $pic_size = $_FILES['photo']['size'];
   $photo = array("name"=>$pic_name, "tmp"=>$pic_tmp, "size"=>$pic_size);
-
-  //echo $pic_size;
-  //echo $name;
-  include("ctrl_addprojs.php"); 
 
   $controller = new ctrl_addprojs();
   $controller->addProjs($name, $photo);

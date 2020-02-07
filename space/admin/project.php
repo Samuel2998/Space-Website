@@ -1,4 +1,13 @@
-<?php include("../ctrl_project.php");
+<?php
+
+session_start();
+
+if(!isset($_SESSION['admin']) || $_SESSION['admin'] != true){
+  header("location: http://localhost/space/admin/welcome.php");
+  exit;
+}
+
+include("../ctrl_project.php");
   
   $id = $_GET['id'];
   $projID = $id;
@@ -71,8 +80,8 @@
           <p style="margin-top: 20px; color: white;">
             <?php echo $text; ?>
           </p>
-          <a class="btn btn-warning" href="editoneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Edit</a>
-          <a class="btn btn-danger" href="deloneproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Delete</a>
+          <a class="btn btn-warning" href="editvidproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Edit</a>
+          <a class="btn btn-danger" href="delvidproj.php?id=<?php echo $id; ?>&projID=<?php echo $projID; ?>">Delete</a>
         </div><br><br>
         <div class="col-sm-4 imgDiv">
           <div class="embed-responsive embed-responsive-16by9">

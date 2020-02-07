@@ -7,22 +7,30 @@ if(!isset($_SESSION['admin']) || $_SESSION['admin'] != true){
   exit;
 }
 
-include("ctrl_addvidproj.php");
-
+include("ctrl_editvidproj.php");
 $id = $_GET['id'];
+$projID = $_GET['projID'];
 
-if(isset($_POST['addprjs'])){
+$controller = new ctrl_editvidproj();
+
+if(isset($_POST['editprjs'])){
   
   $name = $_POST['pname'];
-  $text = $_POST['text'];
   $link = $_POST['link'];
+  $text = $_POST['text'];
 
-  $controller = new ctrl_addvidproj();
-  $controller->addProj($name, $link, $text, $id);
+  //echo $pic_size;
+  //echo $name;
+  //include("ctrl_editprojs.php");
 
-  //echo $id.$name.$text.$link;
+  //$controller = new ctrl_editoneproj();
+  $controller->editVideo($name, $link, $id, $projID, $text);
 
 }
+
+$stm = $controller->getVideo($id, $projID);
+$stm->bind_result($name, $text, $link);
+$stm->fetch();
 
 ?>
 
@@ -44,31 +52,31 @@ if(isset($_POST['addprjs'])){
     </nav>
     <div class="container-fluid projDiv" id="projDiv" style="background: linear-gradient(to right, black, #200033, #de00d6);">
       <div class="row">
-        <h2 class="title">Add Video Project (Admin)</h2>
+        <h2 class="title">Edit Video Project (Admin)</h2>
       </div>
       <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
           <form class="was-validated addprojs" method="post" enctype="multipart/form-data">
             <div class="form-group">
-              <label for="pname">Project Title: </label>
-              <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" required>
+              <label for="pame">Project Name: </label>
+              <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" value="<?php echo $name; ?>" required>
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="form-group">
               <label for="text">Text: </label>
-              <textarea class="form-control" rows="3" id="text" placeholder="Enter Text" name="text" required></textarea>
+              <textarea class="form-control" rows="3" id="text" placeholder="Enter Text" name="text" required><?php echo $text; ?></textarea>
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="form-group">
               <label for="link">Video Link: </label>
-              <input type="text" class="form-control" id="link" placeholder="Enter project name" name="link" required>
+              <input type="text" id="link" name="link" value="<?php echo $link; ?>" required>
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
-            <input type="submit" class="btn btn-primary" value="Add Video Project" name="addprjs">
+            <input type="submit" class="btn btn-primary" value="Edit Project" name="editprjs">
           </form>
         </div>
       </div>

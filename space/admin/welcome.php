@@ -2,26 +2,25 @@
 
 session_start();
 
-if(!isset($_SESSION['admin']) || $_SESSION['admin'] != true){
-  header("location: http://localhost/space/admin/welcome.php");
-  exit;
+if(isset($_SESSION['admin'])){
+
+  if($_SESSION['admin'] == true){
+    header("location: http://localhost/space/admin/index.php");
+    exit;
+  }
+
 }
 
-include("ctrl_addvidproj.php");
+include("ctrl_welcome.php");
 
-$id = $_GET['id'];
+$controller = new ctrl_welcome();
 
-if(isset($_POST['addprjs'])){
+if(isset($_POST['login'])){
   
-  $name = $_POST['pname'];
-  $text = $_POST['text'];
-  $link = $_POST['link'];
+  $name = $_POST['uname'];
+  $pass = $_POST['pass'];
 
-  $controller = new ctrl_addvidproj();
-  $controller->addProj($name, $link, $text, $id);
-
-  //echo $id.$name.$text.$link;
-
+  $controller->login($name, $pass);
 }
 
 ?>
@@ -44,31 +43,25 @@ if(isset($_POST['addprjs'])){
     </nav>
     <div class="container-fluid projDiv" id="projDiv" style="background: linear-gradient(to right, black, #200033, #de00d6);">
       <div class="row">
-        <h2 class="title">Add Video Project (Admin)</h2>
+        <h2 class="title">Welcome (Admin)</h2>
       </div>
       <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
           <form class="was-validated addprojs" method="post" enctype="multipart/form-data">
             <div class="form-group">
-              <label for="pname">Project Title: </label>
-              <input type="text" class="form-control" id="pname" placeholder="Enter project name" name="pname" required>
+              <label for="uname">User name: </label>
+              <input type="text" class="form-control" id="uname" placeholder="Enter User name" name="uname" required>
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="form-group">
-              <label for="text">Text: </label>
-              <textarea class="form-control" rows="3" id="text" placeholder="Enter Text" name="text" required></textarea>
+              <label for="pass">Password: </label>
+              <input type="password" class="form-control" id="pass" placeholder="Enter Password" name="pass" required>
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
-            <div class="form-group">
-              <label for="link">Video Link: </label>
-              <input type="text" class="form-control" id="link" placeholder="Enter project name" name="link" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
-            </div>
-            <input type="submit" class="btn btn-primary" value="Add Video Project" name="addprjs">
+            <input type="submit" class="btn btn-primary" value="Login" name="login">
           </form>
         </div>
       </div>
