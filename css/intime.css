@@ -1,12 +1,17 @@
 body{
 	background-color: black; 
 }
-.row{
+.line{
 	margin-top: 50px;
 }
-.auto-fill {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      }
+.btn-lg{
+  border-radius: 25px;
+  background-color: #fd2360;
+  border: 0;
+}
+.glyphicon-chevron-left{
+  color: black;
+}
  @keyframes slide {
     0% {
       opacity: 0;
