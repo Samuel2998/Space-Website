@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 07, 2020 at 07:43 AM
+-- Generation Time: Feb 07, 2020 at 07:55 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `pass`) VALUES
-(1, 'astronautsinspace', '$2y$10$M15qXMyX33n4CXcvdW7jY.GJLD03yFprwo8YAkIRNt.CE8qJNbx.u');
+(1, 'astronautsinspace', '$2y$10$TfAIjlJ39u7ugf6EtiJzeui.A6Dy61fVshMCJ2NYvNw57Di9rZD8C');
 
 -- --------------------------------------------------------
 
