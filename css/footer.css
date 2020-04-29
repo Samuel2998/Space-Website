@@ -188,6 +188,11 @@ header span{
 	color: deeppink;
 }
 
+.cpyrght{
+	text-align: center;
+	color: white;
+}
+
 /* Here is the code for Responsive Footer */
 /* You can remove below code if you don't want Footer to be responsive */
 
